@@ -162,8 +162,7 @@ endforeach;
   <body>
     <div class="container-fluid">
       <h1>
-        <a href="https://
-           <?= $this_domain ?>">
+        <a href="https://<?= $this_domain ?>">
         <?= $this_domain ?>
         </a>
       <?
@@ -183,12 +182,12 @@ $parent .= $dir_name[$i] . '/';
 ?>
       <?
 endfor;
+
 ?> / 
-      <a href=/
-         <?= $parent ?>>
-      <?= $name ?>
-      </a>
-    <?
+			<a href=/<?= $parent ?>>
+			<?= $name ?>
+			</a>
+		<?
 endif;
 ?>
     <?
@@ -244,11 +243,8 @@ foreach ($file_list as $item):
 ?>
 <tr>
   <th>
-    <a href=
-       <?= $item['name'] ?>.
-    <?= $item['ext'] ?>>
-    <?= $item['name'] ?>.
-    <?= $item['ext'] ?>
+    <a href="<?= $item['name'] ?>.<?= $item['ext'] ?>">
+    <?= $item['name'] ?>.<?= $item['ext'] ?>
 </a>
 </th>
 <th>
