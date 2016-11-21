@@ -1,8 +1,8 @@
-# twbs-listr
+# twbs-listr (v4)
 
-A minimal directory index for Bootstrap.
+A minimal directory index for Bootstrap 4.0.0-alpha.5.
 
-Download [index.php](https://raw.githubusercontent.com/citrusui/twbs-listr/master/index.php), and drop it into one of your directories.
+Download [index.php](index.php), and drop it into one of your directories.
 
 # License
 
