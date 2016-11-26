@@ -131,12 +131,13 @@ function time_ago($timestamp, $recursive = 0) {
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <style>.server-name{word-wrap:break-word;}</style>
 </head>
 <title>Index of <? $parent = '/'; ?><? foreach ($dir_name as $dir => $name): ?><? if (($name != ' ') && ($name != '') && ($name != '.')): ?><? $parent .= $name . '/'; ?><? endif; ?><? endforeach; ?><?= $parent; ?></title>
 <body>
   <div class="container-fluid">
     <h1>
-      <a href="//<?= $this_domain ?>"><?= $this_domain ?></a><? foreach ($dir_name as $dir => $name): ?><? if (($name != ' ') && ($name != '') && ($name != '.') && ($name != '/')):?><? $parent = ''; ?><? for ($i = 1; $i <= $dir; $i++): ?><? $parent .= $dir_name[$i] . '/';?><?endfor;?> / <a href=/<?= $parent ?>><?= $name ?></a><?endif;?><?endforeach;?>
+      <a class="server-name" href="//<?= $this_domain ?>"><?= $this_domain ?></a><? foreach ($dir_name as $dir => $name): ?><? if (($name != ' ') && ($name != '') && ($name != '.') && ($name != '/')):?><? $parent = ''; ?><? for ($i = 1; $i <= $dir; $i++): ?><? $parent .= $dir_name[$i] . '/';?><?endfor;?> / <a href=/<?= $parent ?>><?= $name ?></a><?endif;?><?endforeach;?>
     </h1>
   </div>
   <div class="table-responsive">
