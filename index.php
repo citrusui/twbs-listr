@@ -137,7 +137,7 @@ function time_ago($timestamp, $recursive = 0) {
 <body>
   <div class="container-fluid">
     <h1>
-      <a class="server-name" href="//<?= $this_domain ?>"><?= $this_domain ?></a><? foreach ($dir_name as $dir => $name): ?><? if (($name != ' ') && ($name != '') && ($name != '.') && ($name != '/')):?><? $parent = ''; ?><? for ($i = 1; $i <= $dir; $i++): ?><? $parent .= $dir_name[$i] . '/';?><?endfor;?> / <a href=/<?= $parent ?>><?= $name ?></a><?endif;?><?endforeach;?>
+      <a class="server-name" href="//<?= $this_domain ?>"><?= $this_domain ?></a><? foreach ($dir_name as $dir => $name): ?><? if (($name != ' ') && ($name != '') && ($name != '.') && ($name != '/')):?><? $parent = ''; ?><? for ($i = 1; $i <= $dir; $i++): ?><? $parent .= $dir_name[$i] . '/';?><?endfor;?> / <a href="/<?= $parent ?>"><?= $name ?></a><?endif;?><?endforeach;?>
     </h1>
   </div>
   <div class="table-responsive">
@@ -152,7 +152,7 @@ function time_ago($timestamp, $recursive = 0) {
       <tbody><?if ($folder_list):?><? foreach ($folder_list as $item): ?>
         <tr>
           <th>
-            <a href=<?= $item['name'] ?>/><?= $item['name'] ?></a>
+            <a href="<?= $item['name'] ?>/"><?= $item['name'] ?></a>
           </th>
           <th>
             <?= $item['size']['num'] ?>
