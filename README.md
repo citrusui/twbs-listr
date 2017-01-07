@@ -1,6 +1,6 @@
 # twbs-listr (v4)
 
-A minimal directory index for Bootstrap 4.0.0-alpha.5.
+A minimal directory index for Bootstrap 4.0.0-alpha.6.
 
 Download [index.php](index.php), and drop it into one of your directories.
 
